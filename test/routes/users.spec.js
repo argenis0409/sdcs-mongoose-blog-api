@@ -75,7 +75,7 @@ describe('/api/users', function () {
                 .end((err, res) => {
                     expect(err).to.be.null;
                     expect(res).to.have.status(204);
-                    
+
                     chai.request(app)
                         .get(`/api/users/${user._id}`)
                         .end((err, res) => {
